@@ -216,3 +216,9 @@ KERNEL=="hidraw*", ATTRS{idVendor}=="04b4", MODE="0660", TAG+="uaccess"
 
 # Flydigi HIDAPI Enhanced Mode
 KERNEL=="hidraw*", ATTRS{idVendor}=="37d7", MODE="0660", TAG+="uaccess"
+
+# Nintendo Wii U/Switch Wired GameCube Controller Adapter
+SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTRS{idVendor}=="057e", ATTRS{idProduct}=="0337", MODE="0660", TAG+="uaccess"
+
+# Nintendo Switch 2 GameCube Controller over USB
+SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTRS{idVendor}=="057e", ATTRS{idProduct}=="2073", MODE="0660", TAG+="uaccess"
